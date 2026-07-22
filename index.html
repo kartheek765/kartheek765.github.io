@@ -12,91 +12,182 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.7;
-            text-align: center;
-            padding: 20px;
+            background-color: #ffffff;
+            color: #2d3748;
+            line-height: 1.8;
+            padding: 50px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 60px 20px;
         }
+        
+        /* Heading Wrapper with Dark Background Bar */
+        .header-box {
+            background-color: #1a202c;
+            padding: 22px 35px;
+            border-radius: 14px;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
         .studio-title {
-            font-size: 3.2rem;
-            color: #58a6ff;
-            margin-bottom: 12px;
-            font-weight: 800;
-            letter-spacing: -1px;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1;
         }
+
+        .gradient-letter {
+            display: inline-block;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Distinct Color Palettes per Letter */
+        .l-k { background-image: linear-gradient(135deg, #00c6ff, #0072ff); }
+        .l-h { background-image: linear-gradient(135deg, #ff416c, #ff4b2b); }
+        .l-s { background-image: linear-gradient(135deg, #11998e, #38ef7d); }
+        .l-t { background-image: linear-gradient(135deg, #8e2de2, #4a00e0); }
+        .l-u { background-image: linear-gradient(135deg, #fc4a1a, #f7b731); }
+        .l-d { background-image: linear-gradient(135deg, #00b4db, #0083b0); }
+        .l-i { background-image: linear-gradient(135deg, #f857a6, #ff5858); }
+        .l-o { background-image: linear-gradient(135deg, #56ab2f, #a8e063); }
+
         .tagline {
             font-size: 1.25rem;
-            color: #8b949e;
-            margin-bottom: 50px;
-            font-weight: 400;
+            color: #4a5568;
+            font-weight: 600;
+            margin-top: 15px;
         }
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            text-align: left;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+        /* Normal Clean Text Sections (No Box Cards) */
+        .section {
+            margin-bottom: 45px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
         }
-        .card h2 {
-            color: #f0f6fc;
-            font-size: 1.4rem;
+
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: #1a202c;
+            font-size: 1.65rem;
             margin-bottom: 15px;
-            border-bottom: 2px solid #238636;
+            font-weight: 700;
             display: inline-block;
-            padding-bottom: 4px;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 2px;
         }
-        .card p {
-            color: #8b949e;
-            font-size: 1rem;
+
+        .section p {
+            color: #4a5568;
+            font-size: 1.08rem;
+            margin-bottom: 15px;
         }
-        .contact-email {
-            color: #58a6ff;
-            text-decoration: none;
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-item h3 {
+            font-size: 1.2rem;
+            color: #2d3748;
+            margin-bottom: 8px;
             font-weight: 600;
         }
+
+        .grid-item p {
+            font-size: 0.98rem;
+            color: #718096;
+            margin-bottom: 0;
+        }
+
+        .contact-email {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
         .contact-email:hover {
             text-decoration: underline;
         }
+
         footer {
             margin-top: 60px;
-            color: #6e7681;
-            font-size: 0.875rem;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Main Branding Header -->
-        <h1 class="studio-title">KH Studio</h1>
-        <p class="tagline">Mobile Applications & Game Development Studio</p>
+        <!-- Header with Dark Background Bar behind KH STUDIO -->
+        <div class="header-container">
+            <div class="header-box">
+                <h1 class="studio-title">
+                    <span class="gradient-letter l-k">K</span><span class="gradient-letter l-h">H</span>
+                    <span style="display: inline-block; width: 10px;"></span>
+                    <span class="gradient-letter l-s">S</span><span class="gradient-letter l-t">T</span><span class="gradient-letter l-u">U</span><span class="gradient-letter l-d">D</span><span class="gradient-letter l-i">I</span><span class="gradient-letter l-o">O</span>
+                </h1>
+            </div>
+            <p class="tagline">Mobile Applications & Game Development Studio</p>
+        </div>
 
-        <!-- About KH Studio Section -->
-        <div class="card">
+        <!-- About Section -->
+        <div class="section">
             <h2>About KH Studio</h2>
-            <p>Welcome to <strong>KH Studio</strong>. We are an independent development studio focused on designing, creating, and publishing high-quality mobile applications and interactive digital games for modern users worldwide.</p>
+            <p>Welcome to <strong>KH Studio</strong>. We are an independent software and game development studio dedicated to crafting high-quality, engaging mobile applications and interactive digital experiences for users worldwide.</p>
+            <p>Our focus is on combining creative game mechanics with lightweight, high-performance architecture. Whether it's an addictive casual puzzle or an essential everyday utility app, KH Studio strives to deliver smooth, reliable, and user-friendly digital products on mobile platforms.</p>
+        </div>
+
+        <!-- Development Expertise Section -->
+        <div class="section">
+            <h2>Core Expertise</h2>
+            <div class="grid-3">
+                <div class="grid-item">
+                    <h3>🎮 Game Development</h3>
+                    <p>Designing casual, puzzle, and arcade games built with engaging mechanics and smooth performance across all Android devices.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>⚡ Utility & Productivity</h3>
+                    <p>Building functional everyday mobile applications focused on intuitive UI, fast load times, and practical solutions.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>🎨 User Experience (UI/UX)</h3>
+                    <p>Prioritizing clean visuals, responsive touch controls, and seamless navigation to ensure a top-tier user experience.</p>
+                </div>
+            </div>
         </div>
 
         <!-- What We Do Section -->
-        <div class="card">
-            <h2>What We Do</h2>
-            <p>At KH Studio, we craft clean, performance-optimized, and user-centric mobile solutions. Our portfolio spans across creative mobile games, utility tools, and functional everyday applications built to deliver seamless digital experiences on mobile platforms.</p>
+        <div class="section">
+            <h2>What We Do & Our Approach</h2>
+            <p>At KH Studio, every project goes through careful design, optimization, and testing to meet global app store standards. Our approach revolves around:</p>
+            <p>• <strong>Performance Optimization:</strong> Ensuring small build sizes, quick startup times, and minimal battery usage.</p>
+            <p>• <strong>Policy & Privacy Compliance:</strong> Adhering strictly to Google Play Developer Policies, AdMob guidelines, and user data safety regulations.</p>
+            <p>• <strong>Continuous Improvements:</strong> Regularly updating our games and apps with bug fixes, performance enhancements, and new feature rollouts.</p>
         </div>
 
         <!-- Developer Contact Section -->
-        <div class="card">
+        <div class="section">
             <h2>Developer & Business Inquiries</h2>
-            <p>For official support, user feedback, or developer inquiries regarding any products published by KH Studio, please contact us directly at:</p>
-            <p style="margin-top: 12px; color: #f0f6fc;">
-                📧 <strong>Email:</strong> 
+            <p>For official support, feature requests, feedback, or business inquiries regarding any application or game published under KH Studio, feel free to reach out to us:</p>
+            <p style="margin-top: 15px; color: #1a202c; font-size: 1.1rem;">
+                📧 <strong>Support Email:</strong> 
                 <a href="mailto:karthik.kalikiri2006@gmail.com" class="contact-email">karthik.kalikiri2006@gmail.com</a>
             </p>
         </div>
