@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KH STUDIO | App & Game Development Studio</title>
+    <title>KH - STUDIO | App & Game Development Studio</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             background-color: #ffffff;
             color: #1a202c;
             line-height: 1.8;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
         .container {
             max-width: 850px;
@@ -24,30 +24,39 @@
 
         .header-container {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        /* Clean Charcoal Black Single-Line Title */
+        /* Responsive Single-Line Title with Adjusted Size */
         .studio-title {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: #1a202c;
             white-space: nowrap;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .studio-title {
+                font-size: 1.8rem;
+                letter-spacing: 0.5px;
+            }
         }
 
         .tagline {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: #2d3748;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         /* Normal Clean Text Sections */
         .section {
-            margin-bottom: 45px;
-            padding-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
             border-bottom: 1px solid #e2e8f0;
         }
 
@@ -57,7 +66,7 @@
 
         .section h2 {
             color: #1a202c;
-            font-size: 1.65rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 700;
             display: inline-block;
@@ -67,7 +76,7 @@
 
         .section p {
             color: #2d3748;
-            font-size: 1.08rem;
+            font-size: 1.05rem;
             margin-bottom: 15px;
             font-weight: 450;
         }
@@ -104,7 +113,7 @@
         }
 
         footer {
-            margin-top: 60px;
+            margin-top: 50px;
             text-align: center;
             color: #4a5568;
             font-size: 0.95rem;
